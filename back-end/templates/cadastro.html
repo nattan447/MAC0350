@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Simples</title>
+    <link rel="stylesheet" href="/static/cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cadastro-card">
+            <h1>Cadastro</h1>
+            <p>Preencha os dados abaixo</p>
+
+            <form id="cadastroForm">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input 
+                        type="password" 
+                        id="senha" 
+                        name="senha" 
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea 
+                        id="bio" 
+                        name="bio" 
+                        rows="4" 
+                        placeholder="Fale um pouco sobre você..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button  type="submit" id="btn-cadastrar">Cadastrar</button>
+            </form>
+            <a href="/login">Ja tem conta?</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    const btn_cadastrar = document.getElementById("btn-cadastrar")
+    btn_cadastrar.addEventListener("click",()=>{
+        enviar_usuario();
+    })
+    async function enviar_usuario() {
+        const dados = {
+            nome: document.getElementById("nome").value,
+            senha: document.getElementById("senha").value,
+            bio: document.getElementById("bio").value
+        }
+
+    const resposta = await fetch('/usuarios', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    });
+    }
+</script>
