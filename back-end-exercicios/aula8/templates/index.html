@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Projeto FastAPI + HTMX</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <style>
+        .active { border-bottom: 2px solid blue; font-weight: bold; }
+        nav button { margin-right: 10px; cursor: pointer; }
+    </style>
+</head>
+<body hx-get="/tab/curtidas" hx-trigger="load, keyup[shiftKey&&ctrlKey&&altKey&&code=='KeyP'] from:body" hx-target="#conteudo">
+    
+    <header>
+        <nav id="nav-abas" hx-target="#conteudo" hx-push-url="false">
+            <button hx-get="/tab/curtidas" hx-on:click="updateActive(this)">Curtidas</button>
+            <button hx-get="/tab/jupiter" hx-on:click="updateActive(this)">Júpiter</button>
+            <button hx-get="/tab/professor" hx-on:click="updateActive(this)">Professor</button>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main id="conteudo">
+        </main>
+
+    <script>
+        function updateActive(elt) {
+            document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+            elt.classList.add('active');
+        }
+    </script>
+</body>
+</html>

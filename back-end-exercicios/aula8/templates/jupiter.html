@@ -1,0 +1,116 @@
+<div class="aba-jupiter">
+    <div class="login-container">
+        <header>
+            <img src="/static/USP-Brasão.jpg" id="logusp" alt="Brasão USP">
+            <h1>Sistema Júpiter</h1>
+        </header>
+        
+        <main>
+            <form hx-post="/login-jupiter" hx-target="#conteudo-dinamico">
+                <div class="input-group">
+                    <label for="user">Usuário</label>
+                    <input type="text" name="user" id="user" placeholder="Seu número USP" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="passwd">Senha</label>
+                    <input type="password" name="passwd" id="passwd" placeholder="Sua senha" required>
+                </div>
+                
+                <button type="submit" id="btn-login">ENTRAR</button>
+            </form>
+            
+            <div class="links-auxiliares">
+                <a href="#">Esqueci minha senha</a>
+                <a href="#">Primeiro acesso?</a>
+            </div>
+        </main>
+
+        <section class="info-generica">
+            <p>Acesse o portal para consultar sua grade horária e notas.</p>
+        </section>
+    </div>
+</div>
+
+<style>
+    .aba-jupiter {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .aba-jupiter .login-container {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .aba-jupiter header img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    .aba-jupiter header h1 {
+        color: #003e7e;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .aba-jupiter .input-group {
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+
+    .aba-jupiter label {
+        display: block;
+        color: #555;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .aba-jupiter input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .aba-jupiter #btn-login {
+        width: 100%;
+        padding: 12px;
+        background-color: #003e7e;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .aba-jupiter .links-auxiliares {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+    }
+
+    .aba-jupiter .links-auxiliares a {
+        color: #003e7e;
+        text-decoration: none;
+    }
+
+    .aba-jupiter .info-generica {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+        color: #777;
+        font-size: 0.8rem;
+    }
+</style>

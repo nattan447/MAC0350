@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Júpiter - USP Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <header>
+            <img src="USP-Brasão.jpg" id="logusp" alt="Brasão USP">
+            <h1>Sistema Júpiter</h1>
+        </header>
+        
+        <main>
+            <form id="forms-login">
+                <div class="input-group">
+                    <label for="user">Usuário</label>
+                    <input type="text" id="user" placeholder="Seu número USP" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="passwd">Senha</label>
+                    <input type="password" id="passwd" placeholder="Sua senha" required>
+                </div>
+                
+                <button type="submit" id="btn-login">ENTRAR</button>
+            </form>
+            
+            <div class="links-auxiliares">
+                <a href="#">Esqueci minha senha</a>
+                <a href="#">Primeiro acesso?</a>
+            </div>
+        </main>
+
+        <section class="info-generica">
+            <p>Acesse o portal para consultar sua grade horária e notas.</p>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body { font-family: sans-serif; max-width: 400px; margin: 100px auto; text-align: center; }
+        input { width: 100%; margin-bottom: 15px; padding: 8px; display: block; }
+        button { width: 100%; padding: 10px; background: #b39014; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Acessar Sistema</h2>
+    <input type="text" id="nome" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="logar()">Entrar</button>
+    <p><a href="/">Não tem conta? Cadastre-se</a></p>
+
+    <script>
+        async function logar() {
+            const dados = {
+                nome: document.getElementById('nome').value,
+                senha: document.getElementById('senha').value
+            };
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dados)
+            });
+
+            if (response.ok) {
+                window.location.href = '/home';
+            } else {
+                alert('Usuário ou senha incorretos.');
+            }
+        }
+    </script>
+</body>
+</html>

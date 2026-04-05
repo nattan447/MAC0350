@@ -1,0 +1,115 @@
+<div class="aba-professor">
+    <div class="professor-container">
+        <header class="prof-header">
+            <h1>Kelly Rosa Braghetto</h1>
+            <p class="subtitle">Professora Doutora</p>
+            <p class="affiliation">
+                <a href="http://www.ime.usp.br/dcc/index-english.php" target="_blank">Departamento de Ciência da Computação</a><br>
+                <a href="http://www.ime.usp.br/" target="_blank">Instituto de Matemática e Estatística</a><br>
+                <a href="http://www.usp.br/" target="_blank">Universidade de São Paulo</a>
+            </p>
+        </header>
+
+        <section class="contact-card">
+            <div class="card-column">
+                <h3>Contato</h3>
+                <p><strong>Sala:</strong> IME/USP C-224</p>
+                <p><strong>E-mail:</strong> <a href="mailto:kellyrb@ime.usp.br">kellyrb@ime.usp.br</a></p>
+                <p><strong>Tel:</strong> +55 11 3091-0750</p>
+            </div>
+            <div class="card-column">
+                <h3>Endereço</h3>
+                <p>Rua do Matão, 1010<br>
+                Cidade Universitária - São Paulo/SP<br>
+                CEP: 05508-090</p>
+            </div>
+        </section>
+
+        <section class="research-interests">
+            <h3>Interesses de Pesquisa</h3>
+            <p>Bancos de Dados, Gerenciamento de Workflows, Gestão de Processos de Negócio (BPM), Métodos Formais e Avaliação de Desempenho via Modelagem Analítica.</p>
+        </section>
+    </div>
+</div>
+
+<style>
+    .aba-professor {
+        --prof-blue: #003e7e;
+        --prof-gold: #b39014;
+        --prof-bg-alt: #f8f9fa;
+        --prof-text-muted: #555555;
+        
+        line-height: 1.6;
+        color: #1a1a1a;
+        animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .professor-container {
+        max-width: 850px;
+        margin: 20px auto;
+    }
+
+    .prof-header {
+        margin-bottom: 40px;
+        border-bottom: 2px solid var(--prof-blue);
+        padding-bottom: 20px;
+    }
+
+    .prof-header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        color: var(--prof-blue);
+        font-weight: 700;
+        border: none; 
+    }
+
+    .prof-header .subtitle {
+        font-size: 1.2rem;
+        color: var(--prof-gold);
+        margin: 5px 0;
+    }
+
+    .prof-header .affiliation a {
+        color: var(--prof-text-muted);
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    .aba-professor .contact-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        background: var(--prof-bg-alt);
+        padding: 30px;
+        border-radius: 8px;
+        margin: 30px 0;
+    }
+
+    .aba-professor h3 {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: var(--prof-blue);
+        margin-top: 0;
+        border-bottom: 1px solid var(--prof-gold);
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .card-column p {
+        margin: 8px 0;
+    }
+
+    @media (max-width: 600px) {
+        .aba-professor .contact-card { 
+            grid-template-columns: 1fr; 
+        }
+        .prof-header h1 { 
+            font-size: 1.8rem; 
+        }
+    }
+</style>

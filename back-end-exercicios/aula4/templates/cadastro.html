@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <style>
+        body { font-family: sans-serif; max-width: 400px; margin: 50px auto; line-height: 1.5; }
+        input, textarea { width: 100%; margin-bottom: 15px; padding: 8px; display: block; }
+        button { width: 100%; padding: 10px; background: #003e7e; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Criar Nova Conta</h2>
+    <input type="text" id="nome" placeholder="Nome de usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <textarea id="bio" placeholder="Sua biografia"></textarea>
+    <button onclick="registrar()">Cadastrar</button>
+    <p><a href="/login">Já tem conta? Logar</a></p>
+
+    <script>
+        async function registrar() {
+            const dados = {
+                nome: document.getElementById('nome').value,
+                senha: document.getElementById('senha').value,
+                bio: document.getElementById('bio').value
+            };
+
+            const response = await fetch('/users', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dados)
+            });
+
+            if (response.ok) {
+                alert('Usuário criado!');
+                window.location.href = '/login';
+            } else {
+                alert('Erro ao cadastrar.');
+            }
+        }
+    </script>
+</body>
+</html>

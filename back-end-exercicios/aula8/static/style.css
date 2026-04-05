@@ -1,0 +1,28 @@
+:root {
+            --usp-blue: #003e7e;
+            --usp-gold: #b39014;
+        }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; }
+        
+        .nav-principal {
+            background: var(--usp-blue);
+            display: flex;
+            padding: 0 20px;
+            gap: 10px;
+        }
+        .nav-principal button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-bottom: 3px solid transparent;
+        }
+        .nav-principal button.htmx-request { opacity: 0.5; }
+        .nav-principal button.active {
+            border-bottom: 3px solid var(--usp-gold);
+        }
+        
+        #conteudo-dinamico { padding: 30px; }
+

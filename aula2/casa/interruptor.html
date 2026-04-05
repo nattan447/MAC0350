@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio do Interruptor</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: sans-serif;
+            transition: background 0.4s;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="mensagem">A luz está APAGADA</h1>
+    <button onclick="alternarLuz()">Pressionar Interruptor</button>
+
+    <script>
+        function alternarLuz() {
+            const el = document.querySelector('#mensagem');
+            
+            if (el.innerText === "A luz está APAGADA") {
+                el.innerText = "A luz está ACESA";
+            } else {
+                el.innerText = "A luz está APAGADA";
+            }
+        }
+    </script>
+</body>
+</html>

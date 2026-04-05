@@ -1,0 +1,115 @@
+:root {
+    --azul-usp: #003e7e;
+    --dourado-usp: #b39014;
+    --cinza-claro: #f4f4f4;
+    --branco: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cinza-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+header img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    color: var(--azul-usp);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--azul-usp);
+}
+
+#btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--azul-usp);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#btn-login:hover {
+    background-color: #002a55;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#btn-login:active {
+    transform: scale(0.98);
+}
+
+.links-auxiliares {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+
+.links-auxiliares a {
+    color: var(--azul-usp);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links-auxiliares a:hover {
+    color: var(--dourado-usp);
+    text-decoration: underline;
+}
+
+.info-generica {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}

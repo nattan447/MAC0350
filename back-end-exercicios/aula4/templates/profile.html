@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Perfil</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+        .header { border-bottom: 2px solid #003e7e; margin-bottom: 20px; }
+        .bio-box { background: #f9f9f9; padding: 15px; border-left: 5px solid #b39014; }
+        .logout { margin-top: 20px; display: inline-block; color: red; text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Bem-vindo, {{ nome }}!</h1>
+    </div>
+    
+    <div class="bio-box">
+        <h3>Sobre mim:</h3>
+        <p>{{ bio }}</p>
+    </div>
+
+    <a href="/login" class="logout" onclick="document.cookie = 'session_user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';">Sair da conta</a>
+</body>
+</html>

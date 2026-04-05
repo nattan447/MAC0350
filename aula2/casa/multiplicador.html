@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio do Multiplicador</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 100px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #numero {
+            font-size: 80px;
+            margin: 20px 0;
+            color: #003e7e;
+        }
+        button {
+            background-color: #b39014;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #8c7110;
+        }
+    </style>
+</head>
+<body>
+
+    <p>O valor atual é:</p>
+    <h1 id="numero">2</h1>
+    <button onclick="dobrarValor()">Dobrar o número</button>
+
+    <script>
+        let valor = 2;
+
+        function dobrarValor() {
+            valor = valor * 2;
+            
+            document.querySelector('#numero').innerText = valor;
+
+            if (valor > 100) {
+                alert(`Cuidado, o número ${valor} está ficando muito grande!`);
+            }
+        }
+    </script>
+</body>
+</html>
